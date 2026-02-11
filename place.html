@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityGuide — Szczegóły</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <script defer src="assets/js/main.js"></script>
+  <script
+    defer
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script defer src="assets/js/place.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">CityGuide</a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="places.html">Miejsca</a>
+        <a class="nav-link" href="contact.html">Kontakt</a>
+        <button class="btn btn-ghost" id="favoritesBtn" type="button" title="Pokaż ulubione">
+          ❤ <span id="favCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <a class="link" href="places.html">← Wróć do listy</a>
+
+      <article class="details" id="details" aria-live="polite">
+        <div class="details-top">
+          <div>
+            <h1 id="placeName">Ładowanie…</h1>
+            <p class="muted" id="placeMeta"></p>
+          </div>
+          <button class="btn" id="favToggle" type="button">❤ Dodaj do ulubionych</button>
+        </div>
+
+        <div class="details-body">
+          <div class="details-left">
+            <img id="placeImage" class="details-image" alt="" />
+            <section class="card pad">
+              <h2>Opis</h2>
+              <p id="placeDesc" class="muted"></p>
+            </section>
+
+            <section class="card pad">
+              <h2>Godziny</h2>
+              <p id="placeHours" class="muted"></p>
+            </section>
+          </div>
+
+          <aside class="details-right">
+            <section class="card pad">
+              <h2>Lokalizacja</h2>
+              <p class="muted" id="placeAddress"></p>
+              <div id="map" class="map" role="application" aria-label="Mapa miejsca"></div>
+              <p class="muted small">Mapa: OpenStreetMap (Leaflet)</p>
+            </section>
+          </aside>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="muted">© <span id="year"></span> CityGuide</p>
+      <p class="muted">Integracja zewnętrzna: Leaflet + OSM</p>
+    </div>
+  </footer>
+</body>
+</html>

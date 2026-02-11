@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityGuide — Kontakt</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/contact.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">CityGuide</a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="places.html">Miejsca</a>
+        <a class="nav-link" href="contact.html" aria-current="page">Kontakt</a>
+        <button class="btn btn-ghost" id="favoritesBtn" type="button" title="Pokaż ulubione">
+          ❤ <span id="favCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" aria-labelledby="contactTitle">
+      <h1 id="contactTitle">Kontakt</h1>
+      <p class="muted">Formularz demonstracyjny z walidacją po stronie klienta.</p>
+
+      <div class="grid two">
+        <article class="card pad">
+          <h2>Napisz wiadomość</h2>
+
+          <form id="contactForm" class="form" novalidate>
+            <div class="field">
+              <label for="name">Imię</label>
+              <input id="name" name="name" type="text" minlength="2" required />
+              <small class="error" id="nameErr"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+              <small class="error" id="emailErr"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Wiadomość</label>
+              <textarea id="message" name="message" rows="5" minlength="10" required></textarea>
+              <small class="error" id="msgErr"></small>
+            </div>
+
+            <button class="btn" type="submit">Wyślij</button>
+            <p class="muted small" id="formStatus" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <aside class="card pad">
+          <h2>FAQ</h2>
+          <section class="faq">
+            <details>
+              <summary>Czy to jest prawdziwy przewodnik?</summary>
+              <p class="muted">To projekt zaliczeniowy — dane są przykładowe.</p>
+            </details>
+            <details>
+              <summary>Skąd mapa?</summary>
+              <p class="muted">Leaflet + OpenStreetMap, ładowane z CDN.</p>
+            </details>
+            <details>
+              <summary>Gdzie są ulubione?</summary>
+              <p class="muted">W localStorage przeglądarki (bez backendu).</p>
+            </details>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="muted">© <span id="year"></span> CityGuide</p>
+      <p class="muted">Walidacja formularza • Animacje</p>
+    </div>
+  </footer>
+</body>
+</html>

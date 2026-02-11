@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityGuide — Miejsca</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/places.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">CityGuide</a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="places.html" aria-current="page">Miejsca</a>
+        <a class="nav-link" href="contact.html">Kontakt</a>
+        <button class="btn btn-ghost" id="favoritesBtn" type="button" title="Pokaż ulubione">
+          ❤ <span id="favCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" aria-labelledby="placesTitle">
+      <div class="section-head">
+        <h1 id="placesTitle">Miejsca</h1>
+        <p class="muted" id="resultCount">Ładowanie…</p>
+      </div>
+
+      <section class="panel" aria-label="Filtry i sortowanie">
+        <form id="filtersForm" class="filters" autocomplete="off">
+          <div class="field">
+            <label for="searchInput">Szukaj</label>
+            <input id="searchInput" type="search" placeholder="np. kawa, muzeum, park…" />
+          </div>
+
+          <div class="field">
+            <label for="categorySelect">Kategoria</label>
+            <select id="categorySelect">
+              <option value="all">Wszystkie</option>
+              <option value="kawiarnia">Kawiarnia</option>
+              <option value="muzeum">Muzeum</option>
+              <option value="park">Park</option>
+              <option value="atrakcja">Atrakcja</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priceSelect">Cena</label>
+            <select id="priceSelect">
+              <option value="all">Dowolna</option>
+              <option value="1">€ (tania)</option>
+              <option value="2">€€ (średnia)</option>
+              <option value="3">€€€ (droga)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="sortSelect">Sortuj</label>
+            <select id="sortSelect">
+              <option value="rating_desc">Ocena: malejąco</option>
+              <option value="rating_asc">Ocena: rosnąco</option>
+              <option value="name_asc">Nazwa: A–Z</option>
+              <option value="name_desc">Nazwa: Z–A</option>
+            </select>
+          </div>
+
+          <div class="field field-actions">
+            <button class="btn" id="applyBtn" type="submit">Zastosuj</button>
+            <button class="btn btn-ghost" id="resetBtn" type="button">Reset</button>
+          </div>
+        </form>
+
+        <div class="hint muted">
+          Tip: kliknij ❤ na karcie, żeby dodać do ulubionych.
+        </div>
+      </section>
+
+      <section aria-label="Lista miejsc">
+        <div id="placesGrid" class="grid cards" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="muted">© <span id="year"></span> CityGuide</p>
+      <p class="muted">Responsywność • Grid/Flex • Interakcje</p>
+    </div>
+  </footer>
+</body>
+</html>

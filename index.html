@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityGuide — Start</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">CityGuide</a>
+      <nav class="site-nav" aria-label="Główna nawigacja">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="places.html">Miejsca</a>
+        <a class="nav-link" href="contact.html">Kontakt</a>
+        <button class="btn btn-ghost" id="favoritesBtn" type="button" title="Pokaż ulubione">
+          ❤ <span id="favCount" class="badge">0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="heroTitle">
+      <article class="hero-card">
+        <h1 id="heroTitle">Odkrywaj najlepsze miejsca w mieście</h1>
+        <p class="muted">
+          Przeglądaj atrakcje, kawiarnie i muzea. Filtruj, zapisuj ulubione i zobacz lokalizację na mapie.
+        </p>
+
+        <form class="search" id="homeSearchForm">
+          <label class="sr-only" for="q">Szukaj miejsca</label>
+          <input id="q" name="q" type="search" placeholder="np. kawa, muzeum, park…" autocomplete="off" />
+          <button class="btn" type="submit">Szukaj</button>
+        </form>
+
+        <div class="chips" role="list" aria-label="Szybkie kategorie">
+          <button class="chip" data-q="kawiarnia" type="button">Kawiarnie</button>
+          <button class="chip" data-q="muzeum" type="button">Muzea</button>
+          <button class="chip" data-q="park" type="button">Parki</button>
+          <button class="chip" data-q="atrakcja" type="button">Atrakcje</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="featuredTitle">
+      <div class="section-head">
+        <h2 id="featuredTitle">Polecane miejsca</h2>
+        <a class="link" href="places.html">Zobacz wszystkie →</a>
+      </div>
+
+      <div id="featuredGrid" class="grid cards" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="muted">© <span id="year"></span> CityGuide</p>
+      <p class="muted">OpenStreetMap + Leaflet • Projekt demonstracyjny</p>
+    </div>
+  </footer>
+</body>
+</html>
