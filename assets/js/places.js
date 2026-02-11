@@ -140,7 +140,24 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     render();
     bindCardEvents(grid);
-
+    function debounce(fn, delay = 250) {
+        let t;
+        return (...args) => {
+          clearTimeout(t);
+          t = setTimeout(() => fn(...args), delay);
+        };
+      }
+      
+      const liveSearch = debounce(() => {
+        state = { ...state, q: searchInput.value };
+        const params = new URLSearchParams();
+        if (state.q.trim()) params.set("q", state.q.trim());
+        if (state.favoritesOnly) params.set("favorites", "1");
+        history.replaceState(null, "", `?${params.toString()}`);
+        render();
+      }, 250);
+      
+      searchInput.addEventListener("input", liveSearch);
     filtersForm.addEventListener("submit", (e) => {
       e.preventDefault();
       state = {
