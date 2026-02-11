@@ -1,0 +1,107 @@
+[
+    {
+      "id": "1",
+      "name": "Kawiarnia Zielony Kubek",
+      "category": "kawiarnia",
+      "price": 2,
+      "rating": 4.7,
+      "address": "ul. Przykładowa 10",
+      "lat": 50.4501,
+      "lng": 30.5234,
+      "hours": "Pn–Pt 08:00–20:00, Sb–Nd 09:00–18:00",
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=60",
+      "description": "Przytulna kawiarnia z dobrą kawą i deserami. Idealna na pracę i spotkania."
+    },
+    {
+      "id": "2",
+      "name": "Muzeum Historii Miasta",
+      "category": "muzeum",
+      "price": 1,
+      "rating": 4.5,
+      "address": "Plac Centralny 2",
+      "lat": 50.4547,
+      "lng": 30.5238,
+      "hours": "Wt–Nd 10:00–18:00 (Pn nieczynne)",
+      "image": "https://images.unsplash.com/photo-1535909339361-9b4e4b6b1c4d?auto=format&fit=crop&w=1200&q=60",
+      "description": "Wystawy stałe i czasowe poświęcone historii i kulturze miasta."
+    },
+    {
+      "id": "3",
+      "name": "Park Nad Rzeką",
+      "category": "park",
+      "price": 1,
+      "rating": 4.8,
+      "address": "Bulwar Rzeczny",
+      "lat": 50.4476,
+      "lng": 30.5265,
+      "hours": "Codziennie 06:00–23:00",
+      "image": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1200&q=60",
+      "description": "Dużo zieleni, trasy spacerowe i widok na rzekę. Świetne miejsce na relaks."
+    },
+    {
+      "id": "4",
+      "name": "Taras Widokowy SkyPoint",
+      "category": "atrakcja",
+      "price": 3,
+      "rating": 4.6,
+      "address": "Wieżowiec Aurora, piętro 25",
+      "lat": 50.4522,
+      "lng": 30.5207,
+      "hours": "Codziennie 11:00–21:00",
+      "image": "https://images.unsplash.com/photo-1520975958225-9f9f0f5d0b7f?auto=format&fit=crop&w=1200&q=60",
+      "description": "Panoramiczny widok na miasto. Najlepiej przy zachodzie słońca."
+    },
+    {
+      "id": "5",
+      "name": "Kawiarnia Espresso Lab",
+      "category": "kawiarnia",
+      "price": 2,
+      "rating": 4.4,
+      "address": "ul. Kawowa 5",
+      "lat": 50.4490,
+      "lng": 30.5155,
+      "hours": "Pn–Nd 08:00–20:00",
+      "image": "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=60",
+      "description": "Specialty coffee, mleczne klasyki i szybkie śniadania."
+    },
+    {
+      "id": "6",
+      "name": "Muzeum Sztuki Nowoczesnej",
+      "category": "muzeum",
+      "price": 2,
+      "rating": 4.3,
+      "address": "Aleja Artystów 12",
+      "lat": 50.4570,
+      "lng": 30.5290,
+      "hours": "Śr–Nd 11:00–19:00",
+      "image": "https://images.unsplash.com/photo-1520694478161-5f5c53c5c3a0?auto=format&fit=crop&w=1200&q=60",
+      "description": "Galerie i instalacje współczesnych artystów. Często nowe wystawy."
+    },
+    {
+      "id": "7",
+      "name": "Park Botaniczny",
+      "category": "park",
+      "price": 2,
+      "rating": 4.7,
+      "address": "ul. Ogrodowa 1",
+      "lat": 50.4429,
+      "lng": 30.5128,
+      "hours": "Codziennie 09:00–19:00",
+      "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=60",
+      "description": "Szklarnie, kolekcje roślin i spokojne alejki."
+    },
+    {
+      "id": "8",
+      "name": "Stare Miasto — Trasa Spacerowa",
+      "category": "atrakcja",
+      "price": 1,
+      "rating": 4.9,
+      "address": "Start: Rynek Główny",
+      "lat": 50.4508,
+      "lng": 30.5222,
+      "hours": "Dostępne całą dobę",
+      "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1200&q=60",
+      "description": "Najładniejsza trasa spacerowa przez historyczne centrum."
+    }
+  ]
+  
